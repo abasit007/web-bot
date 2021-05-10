@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Js Sripts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Chatscript</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @js_sripts.each do |js_sript| %>
+      <tr>
+        <td><%= js_sript.chatscript %></td>
+        <td><%= link_to 'Show', js_sript %></td>
+        <td><%= link_to 'Edit', edit_js_sript_path(js_sript) %></td>
+        <td><%= link_to 'Destroy', js_sript, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Js Sript', new_js_sript_path %>

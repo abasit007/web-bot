@@ -1,0 +1,22 @@
+<%= form_with(model: js_sript) do |form| %>
+  <% if js_sript.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(js_sript.errors.count, "error") %> prohibited this js_sript from being saved:</h2>
+
+      <ul>
+        <% js_sript.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :chatscript %>
+    <%= form.text_field :chatscript %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

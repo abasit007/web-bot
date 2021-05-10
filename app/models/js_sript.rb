@@ -1,0 +1,2 @@
+class JsSript < ApplicationRecord
+end
